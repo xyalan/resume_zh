@@ -1,0 +1,163 @@
+% LaTeX Curriculum Vitae Template
+%
+% Copyright (C) 2004-2009 Jason Blevins <jrblevin@sdf.lonestar.org>
+% http://jblevins.org/projects/cv-template/
+%
+% You may use use this document as a template to create your own CV
+% and you may redistribute the source code freely. No attribution is
+% required in any resulting documents. I do ask that you please leave
+% this notice and the above URL in the source code if you choose to
+% redistribute this file.
+\documentclass[11pt,a4paper]{article}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
+\usepackage[top=1in,bottom=1in,left=1.25in,right=1.25in]{geometry}
+\usepackage{float}
+\usepackage{fontspec}
+\newfontfamily\zhfont[BoldFont=STHeiti]{STXihei}
+\newfontfamily\zhpunctfont{STXihei}
+\setmainfont{Times New Roman}
+\usepackage{indentfirst}
+\usepackage{zhspacing}
+\zhspacing
+\usepackage{hyperref}
+\usepackage{geometry}
+
+
+
+% Set your name here
+\def\name{杨后龙}
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor = black,
+  pdfauthor = {\name},
+  pdfkeywords = {economics, statistics, mathematics},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+  body={6.5in, 8.5in},
+  left=1.0in,
+  top=1.25in
+}
+
+% Customize page headers
+\pagestyle{myheadings}
+\markright{\name}
+\thispagestyle{empty}
+
+% Custom section fonts
+\usepackage{sectsty}
+\sectionfont{\rmfamily\mdseries\Large}
+\subsectionfont{\rmfamily\mdseries\itshape\large}
+
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+% Make lists without bullets
+\renewenvironment{itemize}{
+  \begin{list}{}{
+    \setlength{\leftmargin}{1.5em}
+  }
+}{
+  \end{list}
+}
+
+\begin{document}
+
+% Place name at left
+{\huge \name}
+
+% Alternatively, print name centered and bold:
+%\centerline{\huge \bf \name}
+
+\vspace{0.25in}
+
+\begin{minipage}{0.45\linewidth}
+  \begin{tabular}{ll}
+    性别: & 男\\
+    年龄: & 24\\
+    学历: & 大专 \\
+    现居住地: & 上海浦东 \\
+  \end{tabular}
+\end{minipage}
+\begin{minipage}{0.45\linewidth}
+  \begin{tabular}{ll}
+    电话: & 186-6598-6501 \\
+    邮箱: & \href{mailto:alanlhy@gmail.com}{\tt alanlhy@gmial.com} \\
+    博客: & \href{http://hialan.com/}{\tt http://hialan.com/} \\
+    github: & \href{https://github.com/xyalan}{\tt https://github.com/xyalan/} \\
+  \end{tabular}
+\end{minipage}
+
+
+\section*{求职意向}
+
+\begin{itemize}
+\item 到岗时间: 1周以内
+\item 目标工作: 互联网软件开发工程师
+\item 期望薪资: 8000/月
+\end{itemize}
+
+
+\section*{工作经验}
+
+\subsection*{上海蜗游网络科技有限公司 2012.3--2013.8 上海}
+
+\begin{itemize}
+  \item 公司主要从事线上的社交旅游服务，旗下脚丫网以用户自主发布组团出游信息，或用户自己组织或旅行
+    团承接出游为主
+  \item 根据产品的需求设计以及实现核心代码的开发工作，同时解决其他开发人员遇到的问题
+  \item 负责数据库的维护和产品重要bug的修复以及日常维护工作
+  \item 后期同时负责服务器的维护以及产品的版本更新工作
+\end{itemize}
+
+\subsection*{深圳利明达投资有限公司 2011.8--2011.12 深圳}
+
+\begin{itemize}
+  \item 据项目总负责人的给定的系统架构完成机票预定系统中机票查询，预定及支付、用户注册管理模块的具体代码
+    发
+  \item 协助完成系统中部分需求的实现及页面视图的设计
+  \item 实现了系统中机票实时查询，预定支付的和会员注册登录的功能
+\end{itemize}
+
+\section*{项目经验}
+
+\subsection*{脚丫旅游网 2012.3--2013.8}
+
+\begin{itemize}
+\item 项目采用mvc的标准设计模式，应用{\it struts2、hibernate、spring}框架, 使用{\it lucene}完成对目的地，游记的检索
+\item 数据库采用{\it Oracle}，并使用{\it memcached}缓存非频繁更新的数据
+\item 物理服务器为{\it linux}环境，并使用{\it nginx+tomcat}完成部署
+\item 使用{\it eclipse}开发工具，{\it svn}作为代码版本控制系统
+\item 实现网站主要频道的核心后台开发,，诸如自由行、跟团游、目的地、分享秀
+\item 完成新浪、腾讯等社交网站的接口开发工作,  携程、agoda酒店与机票服务的接口开发工作
+\end{itemize}
+
+\subsection*{网上机票预定 2011.8--2011.12}
+
+\begin{itemize}
+\item 项目采用{\it mvp}设计模式，采用{\it gwt、servlet}技术完成前端和后端的开发
+\item 数据库采用{\it mysql}，开发环境和工具以及代码管理使用{\it linux、eclipse、svn}
+\item 实现了用户模块，机票的查询预定以及支付功能
+\end{itemize}
+
+\subsection*{专业技能}
+
+\begin{itemize}
+\item 熟练使用{\it Java、servlet/jsp、jdbc}编程
+\item 能在{\it linux}下完成项目的开发工作
+\end{itemize}
+
+\end{document}
